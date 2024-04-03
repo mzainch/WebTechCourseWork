@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News: Today's news headlines</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.hindustantimes.com/res/images/logo.png"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="https://www.hindustantimes.com/static-content/1y/ht/ht-logo2.webp"
+        alt="LOGo"
+      />
+      <nav>
+        <ul>
+          <li id="menu-item"><a href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Opinion</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Entertainment</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="main-content">
+      <article>
+        <h2>Headline News</h2>
+        <img
+          class="arvind"
+          src="https://www.hindustantimes.com/ht-img/img/2024/04/03/550x309/Arvind_Kejriwal_1712129497423_1712129497658.jpg"
+          alt="Arvind Kejriwal"
+          class="hover-image"
+        />
+        <p>
+          Arvind Kejriwal is an Indian politician and the current Chief Minister
+          of Delhi, a position he has held since February 2015.
+        </p>
+        <a
+          href="https://www.hindustantimes.com/india-news/bid-to-stop-me-from-participating-in-election-kejriwal-in-delhi-high-court-101712129191849.html"
+          >READ MORE...</a
+        >
+      </article>
+      <article>
+        <h2>Latest Updates</h2>
+        <img
+          class="earth"
+          src="https://www.hindustantimes.com/ht-img/img/2024/04/03/148x111/TOPSHOT-TAIWAN-JAPAN-EARTHQUAKE-TSUNAMI-7_1712127934206_1712127963713.jpg"
+          alt="Taiwan EarthQuake"
+          class="hover-image"
+        />
+        <p>EarthQuake in Taiwan</p>
+        <a
+          href="https://www.hindustantimes.com/world-news/taiwan-earthquake-april-3-2024-people-trapped-under-building-japan-issues-tsunami-alert-latest-live-updates-101712105490477.html"
+          >READ MORE...</a
+        >
+      </article>
+      <article>
+        <h2>HOTSHOT NEWS IN TOWN</h2>
+        <img
+          class="holly"
+          src="https://www.hindustantimes.com/ht-img/img/2024/04/03/550x309/MixCollage-03-Apr-2024-11-56-AM-7810_1712125542774_1712125555291.jpg"
+          alt="Hollywood Actors"
+          class="hover-image"
+        />
+        <p>Hollywood Star Collaborates with Ranveer singh.</p>
+        <a
+          href="https://www.hindustantimes.com/entertainment/bollywood/ranveer-singh-reunites-with-johnny-sins-another-hilarious-parody-ad-mens-sexual-health-watch-101712125035370.html"
+          >READ MORE...</a
+        >
+      </article>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Hindustan Times. All rights reserved.</p>
+    </footer>
+    <script>
+      const images = document.querySelectorAll(".hover-image");
+      const menuItem = document.getElementById("menu-item");
+
+      images.forEach((image) => {
+        image.addEventListener("mouseover", () => {
+          const imageName = image.alt;
+          menuItem.textContent = imageName;
+        });
+
+        image.addEventListener("mouseout", () => {
+          menuItem.textContent = "Home";
+        });
+      });
+    </script>
+  </body>
+</html>
